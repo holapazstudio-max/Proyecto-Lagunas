@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Lagunas | CECUAL</title>
+    <!-- Fuentes: Fredoka (Títulos) y Nunito (Cuerpo) -->
+    <!-- Fuentes basadas en el flyer del CECUAL -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Montserrat:wght@400;600;800&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+    <!-- Vinculación del CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="logo">LAGUNAS</div>
+        <nav class="main-nav">
+            <a href="#hero">Inicio</a>
+            <a href="#mapa">Mapa Lagunas</a>
+            <a href="#agenda">Agenda</a>
+            <a href="#bitacora">Bitácora</a>           
+            <a href="#comunidad">Comunidad</a>
+        </nav>
+        <div class="header-actions">
+            <a href="#participar" class="btn-primary">Próximo Evento</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección Principal (Hero) -->
+        <section id="hero" class="hero-section">
+            <div class="hero-illustration">
+                <img src="header.png" alt="Ilustración del puente y la laguna" class="hero-img">
+            </div>
+            <div class="hero-text">
+                <h1>LAGUNAS</h1>
+                <p>culturas comunidades habitats</p>
+            </div>
+        </section>
+
+        <!-- Sección Sobre Nosotros -->
+        <section id="sobre-nosotros" class="about-section">
+            <div class="about-content">
+                <h2>¡Bienvenidos al Proyecto Lagunas!</h2>
+                <p>Un espacio de encuentro, diálogo e intercambio que propone pensar colectivamente la relación de la ciudad de Resistencia con sus lagunas, comunidad y hábitats. Un recorrido de sentipensar nuestro territorio.</p>
+            <a href="sobre-nosotros.html" class="btn-primary btn-saber-mas">Saber más</a>
+            </div>
+            <div class="about-image">
+                <!-- Reemplazar con la foto real del CECUAL -->
+                <img src="fachada.jpg" alt="Fachada del CECUAL" class="cecual-img">
+            </div>
+        </section>
+
+        <!-- Sección Mapa Interactivo -->
+        <section id="mapa" class="mapa-section">
+        <h2>Cartografía Sensible</h2>
+        <p class="mapa-bajada">Explorá las lagunas de nuestra ciudad.</p>
+    
+        <!-- Aquí es donde Leaflet va a inyectar el mapa -->
+        <div id="mapa-lagunas"></div>
+        </section>
+
+        
+        <!-- Sección Agenda -->
+        <section id="agenda" class="agenda-section">
+            <h2>Agenda Chigaqaama</h2>
+            <div class="agenda-grid">
+                <!-- Tarjeta Evento 1 -->
+                <div class="agenda-card">
+                    <div class="agenda-date">
+                        <span class="day">15</span>
+                        <span class="month">NOV</span>
+                    </div>
+                    <div class="agenda-info">
+                        <h3>Recorrido en Bicicleta</h3>
+                        <p>Exploración poética de las lagunas del norte.</p>
+                    </div>
+                </div>
+                <!-- Tarjeta Evento 2 -->
+                <div class="agenda-card">
+                    <div class="agenda-date">
+                        <span class="day">18</span>
+                        <span class="month">NOV</span>
+                    </div>
+                    <div class="agenda-info">
+                        <h3>Foro Lagunas</h3>
+                        <p>Jornada de diálogo entre vecinos y gestores culturales.</p>
+                    </div>
+                </div>
+                <!-- Tarjeta Evento 3 -->
+                <div class="agenda-card">
+                    <div class="agenda-date">
+                        <span class="day">22</span>
+                        <span class="month">NOV</span>
+                    </div>
+                    <div class="agenda-info">
+                        <h3>Muestra Alba Lo'opi</h3>
+                        <p>Exposición de la cooperativa de artesanos locales.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ESTE ES EL NUEVO CONTENEDOR CON EL BOTÓN -->
+            <div class="agenda-action">
+                <a href="#participar" class="btn-primary">Ir a Agenda</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer con ola -->
+    <footer class="site-footer">
+        <!-- SVG para hacer la forma de ola arriba del footer -->
+        <div class="footer-wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.34,201.39,98.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+
+        
+        <!-- NUEVA SECCIÓN: Organizadores (Límite con el body) -->
+        <div class="footer-logos-section">
+            <h3 class="logos-title">Organizan y Acompañan</h3>
+            <div class="logos-grid">
+                <!-- Tarjeta 1 -->
+                <div class="logo-card">
+                    <img src="https://via.placeholder.com/150x100/ffffff/333333?text=Gobierno+Chaco" alt="Gobierno del Chaco">
+                </div>
+                <!-- Tarjeta 2 -->
+                <div class="logo-card">
+                    <img src="https://via.placeholder.com/150x100/ffffff/333333?text=CECUAL" alt="CECUAL">
+                </div>
+                <!-- Tarjeta 3 -->
+                <div class="logo-card">
+                    <img src="https://via.placeholder.com/150x100/ffffff/333333?text=Chaco+Cultura" alt="Chaco Cultura">
+                </div>
+                <!-- Tarjeta 4 -->
+                <div class="logo-card">
+                    <img src="https://via.placeholder.com/150x100/ffffff/333333?text=Alternativa" alt="Radio Alternativa">
+                </div>
+            </div>
+        </div>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h4>Info</h4>
+                <p>Santa María de Oro 471<br>Resistencia, Chaco</p>
+                <p>Tel: +54 362 400-0000</p>
+            </div>
+            <div class="footer-hours">
+                <h4>Horarios Cecual</h4>
+                <p>Lunes a Viernes: 08:00 a 12:00<br>y de 18:00 a 22:00</p>
+            </div>
+            <div class="footer-actions">
+                <button class="btn-outline">Contactanos</button>
+                <button class="btn-outline">Suma tu proyecto</button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+    // 1. Iniciamos el mapa centrado en Resistencia (Plaza 25 de Mayo aprox)
+    var map = L.map('mapa-lagunas').setView([-27.4511, -58.9865], 13);
+
+    // 2. Traemos el diseño del mapa (estilo base)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '© OpenStreetMap'
+    }).addTo(map);
+
+    // 3. Ponemos un marcador de prueba en la Laguna Francia (como en el flyer)
+    var marker = L.marker([-27.4338, -58.9719]).addTo(map);
+    marker.bindPopup("<b>Laguna Francia</b><br>Recitales al pasto y colores.").openPopup();
+</script>
+<!-- 1. Primero cargas la librería de Leaflet (El motor del mapa) -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- 2. Después cargas TU archivo de JavaScript (Tus instrucciones) -->
+    <script src="mapa.js"></script>
+</body>
+</body>
+</html>
